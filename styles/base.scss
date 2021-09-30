@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+
+    &__link {
+      color: hsl(228, 45%, 44%);
+    }
+  }
+}
