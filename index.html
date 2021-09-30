@@ -10,66 +10,75 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;500;700&display=swap" rel="stylesheet">-->
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="styles/base.css">
+  <link media="only screen and (max-device-width: 480px)"
+    href="styles/mobile.css" rel="stylesheet" />
+  <link media="only screen and (min-device-width: 481px)"
+    href="styles/desktop.css" rel="stylesheet" />
 </head>
 <body>
   <main>
-    <div class="card">
-      <section class="card__cont">
-        <header class="card__header">
-          <div class="card__photo-cont">
-            <img alt="profile photo" 
-              class="card__photo"
-              src="images/image-victor.jpg" />
-          </div>
-        </header>
-        
-        <div class="card__content">
-          <div class="card__info">
-            <div class="card__name-cont">
-              <h2 class="card__name">Victor Crest <em class="card__age">26</em></h2>
+    <div class="components">
+      <div class="card">
+        <section class="card__cont">
+          <header class="card__header">
+            <div class="card__photo-cont">
+              <img alt="profile photo" 
+                class="card__photo"
+                src="images/image-victor.jpg" />
+            </div>
+          </header>
+          
+          <div class="card__content">
+            <div class="card__info">
+              <div class="card__name-cont">
+                <h2 class="card__name">Victor Crest <em class="card__age">26</em></h2>
+              </div>
+
+              <p class="card__ubication">
+                <strong class="card__ubication-text">London</strong>
+              </p>
             </div>
 
-            <p class="card__ubication">
-              <strong class="card__ubication_text">London</strong>
-            </p>
+            <div class="card__division"></div>
+
+            <div class="card__stats">
+              <section class="card__stat">
+                <div class="card__stat-title-cont">
+                  <h3 class="card__stat-title">Followers</h3>
+                </div>
+
+                <p class="card__stat-content">
+                  <strong class="card__stat-text">80K</strong>
+                </p>
+              </section>
+              <section class="card__stat">
+                <div class="card__stat-title-cont">
+                  <h3 class="card__stat-title">Likes</h3>
+                </div>
+
+                <p class="card__stat-content">
+                  <strong class="card__stat-text">803K</strong>
+                </p>
+              </section>
+              <section class="card__stat">
+                <div class="card__stat-title-cont">
+                  <h3 class="card__stat-title">Photos</h3>
+                </div>
+
+                <p class="card__stat-content">
+                  <strong class="card__stat-text">1.4K</strong>
+                </p>
+              </section>
+            </div>
           </div>
 
-          <div class="card__stats">
-            <section class="card_stat">
-              <div class="card__stat-title-cont">
-                <h3 class="card__stat-title">Followers</h3>
-              </div>
-
-              <p class="card__stat-content">
-                <strong class="card__stat-text">80K</strong>
-              </p>
-            </section>
-            <section class="card_stat">
-              <div class="card__stat-title-cont">
-                <h3 class="card__stat-title">Likes</h3>
-              </div>
-
-              <p class="card__stat-content">
-                <strong class="card__stat-text">803K</strong>
-              </p>
-            </section>
-            <section class="card_stat">
-              <div class="card__stat-title-cont">
-                <h3 class="card__stat-title">Photos</h3>
-              </div>
-              
-              <p class="card__stat-content">
-                <strong class="card__stat-text">1.4K</strong>
-              </p>
-            </section>
-          </div>
-        </div>
-
-      </section>
+        </section>
+      </div>
+      <!-- <div class="background-top"></div>
+      <div class="background-bottom"></div> -->
     </div>
   </main>
   <footer>

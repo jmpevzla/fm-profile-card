@@ -1,0 +1,13 @@
+.components {
+  &::before {
+    transform: translate(-53%, -53%);
+  }
+
+  &::after {
+    transform: translate(42.5%, 42.5%);
+  }
+}
+
+.card {  
+  max-width: 350px;
+}

@@ -12,8 +12,124 @@ html {
   box-sizing: border-box;
 }
 
-body {
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+
+$dark-gray: hsl(0, 0%, 59%);
+
+.components {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background-color: $dark-cyan;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 978px;
+    height: 978px;
+    background: url('../images/bg-pattern-top.svg') no-repeat;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 978px;
+    height: 978px;
+    background: url('../images/bg-pattern-bottom.svg') no-repeat;
+  }
+}
+
+.card {
+  z-index: 1;
   font-family: 'Kumbh Sans', sans-serif;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+
+  &__header {
+    border-radius: 14px 14px 0 0;
+    background: url('../images/bg-pattern-card.svg') no-repeat;
+    height: 140px;
+  }
+
+  &__photo-cont {
+    transform: translateY(90px);
+  }
+
+  &__photo {
+    display: block;
+    margin: auto;
+    border: 5px solid #fff;
+    border-radius: 50%;
+  }
+
+  &__content {
+    border-radius: 0 0 14px 14px;
+    background-color: #fff;
+    padding: 80px 0 25px 0;
+    text-align: center;
+  }
+
+  &__name-cont {
+    margin-bottom: 1.1rem;
+  }
+
+  &__name {
+    color: $very-dark-desaturated-blue;
+    font-size: 1.8rem;
+  }
+
+  &__age {
+    font-style: normal;
+    margin-left: 1rem;
+    color: $dark-grayish-blue;
+    font-weight: 400;
+  }
+
+  &__ubication {
+    margin-bottom: 0;
+
+    &-text {
+      color: $dark-grayish-blue;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+
+  &__division {
+    height: 2px;
+    background-color: hsl(0, 0%, 90%);
+    margin-block: 2.6rem;
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column-reverse;
+    
+    &-title {
+      font-size: 1.1rem;
+      color: $dark-gray;
+      font-weight: 400;
+      letter-spacing: 0.2rem;
+    }
+
+    &-text {
+      font-size: 1.8rem;
+    }
+  }
 }
 
 footer {
