@@ -1,0 +1,27 @@
+name: Deploy Site
+
+on:
+  workflow_dispatch:
+  push:
+    paths-ignore:
+    - '.github/**' # Ignore changes towards the .github directory
+    branches:
+    - master # Only trigger on the development branch
+
+jobs:
+  deploy:
+    runs-on: [ubuntu-latest]
+    steps:
+    - name: Perform Checkout
+      uses: actions/checkout@v2
+
+    - name: Build
+      run: mkdir -p dist && cp -r index.html styles dist/ && cd dist/styles && sed -i '1s/^/---\n---\n\n/' base.scss desktop.scss mobile.scss
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        force_orphan: true
+        enable_jekyll: true
