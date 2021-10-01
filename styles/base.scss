@@ -1,0 +1,138 @@
+---
+---
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+$very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+
+$dark-gray: hsl(0, 0%, 59%);
+
+.components {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.card {
+  font-family: 'Kumbh Sans', sans-serif;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+
+  &__header {
+    border-radius: 14px 14px 0 0;
+    background: url('../images/bg-pattern-card.svg') no-repeat;
+    height: 140px;
+  }
+
+  &__photo-cont {
+    transform: translateY(87px);
+  }
+
+  &__photo {
+    display: block;
+    margin: auto;
+    border: 5px solid #fff;
+    border-radius: 50%;
+  }
+
+  &__content {
+    border-radius: 0 0 14px 14px;
+    background-color: #fff;
+    padding: 7.2rem 0 2.3rem 0;
+    text-align: center;
+  }
+
+  &__name-cont {
+    margin-bottom: 0.9rem;
+  }
+
+  &__name {
+    color: $very-dark-desaturated-blue;
+    font-size: 1.8rem;
+  }
+
+  &__age {
+    font-style: normal;
+    margin-left: 0.5rem;
+    color: $dark-grayish-blue;
+    font-weight: 400;
+  }
+
+  &__ubication {
+    margin-bottom: 0;
+
+    &-text {
+      color: $dark-grayish-blue;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+
+  &__division {
+    border-top: 1px solid hsl(0, 0%, 90%);
+    color: transparent;
+    margin: 2.4rem 0 2.2rem 0;
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column-reverse;
+    
+    &-content {
+      margin-bottom: .4rem;
+    }
+
+    &-title {
+      font-size: 1.1rem;
+      color: $dark-gray;
+      font-weight: 400;
+      letter-spacing: 0.2rem;
+    }
+
+    &-text {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+
+    &__link {
+      color: hsl(228, 45%, 44%);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+---
+---
+
+.components {
+  background: url('../images/bg-pattern-top.svg') no-repeat 122% 200%, 
+    url('../images/bg-pattern-bottom.svg') no-repeat -20% -100%, 
+    var(--dark-cyan);
+}
+
+.card { 
+  min-width: 326px;
+  max-width: 326px;
+}
