@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build
-      run: mkdir -p dist && cp -r index.html styles dist/ && cd dist/styles && sed -i '1s/^/---\n---\n\n/' base.scss desktop.scss mobile.scss
+      run: mkdir -p dist && cp -r index.htm styles images dist/ && cd dist/styles && sed -i '1s/^/---\n---\n\n/' base.scss desktop.scss mobile.scss
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
