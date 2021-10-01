@@ -1,13 +1,10 @@
 .components {
-  &::before {
-    transform: translate(-53%, -53%);
-  }
-
-  &::after {
-    transform: translate(42.5%, 42.5%);
-  }
+  background: url('../images/bg-pattern-top.svg') no-repeat -62% 200%, 
+    url('../images/bg-pattern-bottom.svg') no-repeat 150% -145%, 
+    var(--dark-cyan)
 }
 
 .card {  
+  min-width: 350px;
   max-width: 350px;
 }
